@@ -140,7 +140,9 @@ class EditDialog(QDialog):
         connection= sqlite3.connect("database.db")
         cursor = connection.cursor()
         cursor.execute("UPDATE students SET name = ?, course = ?, mobile = ? WHERE id = ?",
-                       (self.student_name.text(), self.course_name.text(), self.mobile.text(),
+                       (self.student_name.text(),
+                        self.course_name.itemText(self.course_name.currentIndex()),
+                        self.mobile.text(),
                         self.student_id.text()))
         connection.commit()
         cursor.close()
@@ -148,8 +150,6 @@ class EditDialog(QDialog):
 
         # Refresh the table
         main_window.load_data()
-
-
 
 
 class DeleteDialog(QDialog):
