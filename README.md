@@ -24,7 +24,8 @@ pip install PyQt6 sqlite3
 python main.py
 ```
 
-##Usage
+## Usage
+
 Upon launching the application, you will see the main window with a table displaying the student records. You can perform the following actions:
 
 - Add a new student by clicking on the "Add Student" button or selecting the corresponding option from the "File" menu.
